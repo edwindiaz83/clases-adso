@@ -384,3 +384,8 @@ const copiaCanasta = canasta.map( (item) => {
 const copiaCanasta2 = canasta.filter( (item) =>  item !== 'pan' );
 
 console.log('copiaCanasta2=', copiaCanasta2);
+
+edwin diazs
+
+
+dfkdsfdsf
