@@ -371,7 +371,7 @@ Estado de Subsidio:
 // Inicia la ejecución de la consulta
 ejecutarConsulta();*/
 
-const canasta = ['leche', 'pan', 'huevos', 'carne', 'verduras'];
+/*const canasta = ['leche', 'pan', 'huevos', 'carne', 'verduras'];
 
 canasta.forEach( (item, key) => { console.log('item=', item, ' key=', key) } );
 
@@ -388,4 +388,102 @@ console.log('copiaCanasta2=', copiaCanasta2);
 edwin diazs
 
 
-dfkdsfdsf
+dfkdsfdsf*/
+
+/*let canasta = ['leche', 'pan', 'huevos', 'carne', 'verduras'];
+
+for (item of canasta) {
+    console.log(item);
+}*/
+/* for in------ objetos
+propiedades = valor
+array, string
+*/
+
+/*const listadecompras = {
+    manzana: 5,
+    pera: 3,
+    naraja: 2,
+    uva: 1,
+
+};
+for (fruta in listadecompras) {
+    console.log(fruta);
+}
+for (fruta in listadecompras) {
+    console.log(`${fruta} : ${listadecompras[fruta]}`);
+}*/
+
+/*let contador = 0;
+
+while (contador < 30) {
+    console.log(contador);
+    contador++;
+}*/
+/* funciones trozos de codigo reutilizables
+puedo recibir parametros
+puedo retonar un valor*/
+/*
+function calculateDiscountedPrice(price, discountPercentage) {
+    const discount = (price * discountPercentage) / 100;
+    const pricewithDiscount = price - discount;
+return pricewithDiscount;
+  }
+
+  const originalPrice = 100;
+  const discountPercentage = 20;
+  const finalPrice = calculateDiscountedPrice(originalPrice, discountPercentage);
+
+    console.log("original Price: $", originalPrice);
+    console.log("discount: " + discountPercentage + "%");
+    console.log("price with discount: $", finalPrice);*/
+
+/* capacidades que tiene una funcion al igual que otros
+ pasar funciones como argumentos -> callback
+ */
+/*function a () {
+    function b() { }
+return b
+ }
+
+const a= function() {
+}*/
+
+/*const rocket = {
+    name: 'Falcon 9',
+    launchmessage: function launchmessage() {
+        console.log(this.name);
+    }
+};
+rocket.launchmessage();*/
+
+/*funciones puras
+
+side  effects
+1 mdifica variables globales
+modofciar paramentros
+llamados a hhttp o solicitudes
+imprimir mensaje en pantalla 
+multiplicacion de DOME
+obtenner fecha y hora*/
+/*const almuerzo = (plato,  proteinas, verdurasbebida) => {
+    return `para el almuerzo voy a comer ${plato} con ${proteinas} y ${verdurasbebida}`*/
+// La primera función (Arrow Function con bloque y 'return' explícito)
+const newGREETING = (name) => {
+    return `Hola ${name}, ¿cómo estás?`
+}
+
+
+const newGreetingImplicit = name => `Hola ${name}, ¿cómo estás?`
+
+
+const edwindiaz1 = newGREETING("Juan");
+
+
+const edwindiaz2 = newGreetingImplicit("Ana");
+
+
+
+console.log("Saludo edwindiaz1 (newGREETING): " + edwindiaz1);
+console.log("Saludo edwindiaz2(newGreetingImplicit): " + edwindiaz2);
+
