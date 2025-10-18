@@ -469,7 +469,7 @@ obtenner fecha y hora*/
 /*const almuerzo = (plato,  proteinas, verdurasbebida) => {
     return `para el almuerzo voy a comer ${plato} con ${proteinas} y ${verdurasbebida}`*/
 // La primera función (Arrow Function con bloque y 'return' explícito)
-const newGREETING = (name) => {
+/* const newGREETING = (name) => {
     return `Hola ${name}, ¿cómo estás?`
 }
 
@@ -485,5 +485,114 @@ const edwindiaz2 = newGreetingImplicit("Ana");
 
 
 console.log("Saludo edwindiaz1 (newGREETING): " + edwindiaz1);
-console.log("Saludo edwindiaz2(newGreetingImplicit): " + edwindiaz2);
+console.log("Saludo edwindiaz2(newGreetingImplicit): " + edwindiaz2);*/
+
+const fruits = Array("apple", "banana", "orange");
+console.log(fruits);
+console.log(fruits.length);
+
+
+const justOneName = ["12"];
+console.log(justOneName);
+
+const numbersA = [5, 10];
+console.log(numbersA);
+
+const numbersB = [5];
+console.log(numbersB);
+
+const ingredients = ["tomato", "cheese", "lettuce",
+    "milk", "2 liters"
+];
+console.log(ingredients);
+ingredients.push("eggs");
+//a grega un elemento al final del array//
+
+console.log(ingredients);
+
+const newingredients = ingredients.concat(["flour", "sugar"]);
+//concatena dos arrays y crea uno nuevo//
+console.log(newingredients);
+console.log(Array.isArray(newingredients));
+
+const numberarray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let sum = 0; // 1. Inicializa la variable 'sum'
+
+for (const number of numberarray) {
+  // 2. Este es el bloque de código que faltaba
+  sum += number;
+}
+
+console.log(sum); // Muestra 15
+//devuelve la posicion del elemento//
+
+const numerosOriginales = [2, 5, 3, 4, 1];
+
+// 1. Uso correcto del map (Crea un array multiplicando por 3)
+const numerosPorTres = numerosOriginales.map(numero => 
+    numero * 3
+);
+
+console.log("Array Original:", numerosOriginales);
+// Resultado: Array Original: [1, 2, 3, 4, 5]
+
+// 2. Corrección: Cambiamos "Array Filtrado" por el array creado por map
+// La variable 'numerosFiltrados' no existe en este código
+console.log("Array por Tres:", numerosPorTres); 
+// Resultado: Array por Tres: [3, 6, 9, 12, 15]
+
+// 3. Corrección: El comando slice() estaba incompleto y la salida desordenada
+// Muestra el resultado de slice (elementos en los índices 2 y 3)
+console.log("Resultado de slice(2, 4):", numerosOriginales.slice(2, 4));
+// Resultado: Resultado de slice(2, 4): [3, 4]
+
+console.log(numerosOriginales.pop());
+ console.log(numerosOriginales);
+ numerosOriginales.pop();
+ 
+ function compareNumbers(a, b) {
+    return a - b;
+}
+numerosOriginales.sort(compareNumbers);
+console.log(numerosOriginales);
+
+const found = numerosOriginales.find( (element) => element > 2 );
+console.log(found);
+
+const islargenumber = (element) => element > 3;
+console.log(numerosOriginales.findIndex(islargenumber));
+
+const even = (element) => element % 6 === 0;
+console.log(numerosOriginales.some(even));
+
+
+const elementos = [
+    { nombre: 'laptop', precio: 800 },
+    { nombre: 'telefono', precio: 600 },
+    { nombre: 'tablet', precio: 400 },
+    { nombre: 'monitor', precio: 300 },
+];
+
+// Utilizamos el método 'reduce' para sumar el 'precio' de cada elemento.
+// 'acc' (acumulador) empieza en 0 y va sumando 'curr.precio' (precio actual).
+const total = elementos.reduce( (acc, curr) => acc + curr.precio, 0 );
+
+console.log(`El total de la compra es: $${total}`); 
+// Resultado esperado en consola: El total de la compra es: $2100
+const trabajos = ["carpintero", "albañil", "plomero", "electricista", "carpintero", "albañil", "plomero"];
+const trabajosfrecuency = trabajos.reduce( (acumulador,  currentvalue) => {
+    if (acumulador[currentvalue]) {
+        acumulador[currentvalue] ++;
+    } else {
+        acumulador[currentvalue] = 1;
+    }
+
+    return acumulador;
+}, {});
+console.log(trabajosfrecuency);
+
+
+
+
+
 
