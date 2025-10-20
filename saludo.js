@@ -487,7 +487,7 @@ const edwindiaz2 = newGreetingImplicit("Ana");
 console.log("Saludo edwindiaz1 (newGREETING): " + edwindiaz1);
 console.log("Saludo edwindiaz2(newGreetingImplicit): " + edwindiaz2);*/
 
-const fruits = Array("apple", "banana", "orange");
+/*const fruits = Array("apple", "banana", "orange");
 console.log(fruits);
 console.log(fruits.length);
 
@@ -589,7 +589,85 @@ const trabajosfrecuency = trabajos.reduce( (acumulador,  currentvalue) => {
 
     return acumulador;
 }, {});
-console.log(trabajosfrecuency);
+console.log(trabajosfrecuency);*/
+
+/**
+ * CLASE PADRE: VEHICULO
+ * Define las propiedades y métodos comunes para todos los vehículos.
+ * Demuestra: Clase, Atributos y Métodos.
+ */
+class Vehiculo {
+    // Constructor: Inicializa los atributos del objeto.
+    constructor(marca, modelo, color) {
+        this.marca = marca; // Atributo
+        this.modelo = modelo; // Atributo
+        this.color = color; // Atributo
+    }
+
+    // Método: Define una acción común.
+    encender() {
+        return `El ${this.marca} ${this.modelo} (${this.color}) ha encendido su motor.`;
+    }
+
+    // Método: Muestra la información básica.
+    mostrarInfo() {
+        return `Marca: ${this.marca} | Modelo: ${this.modelo} | Color: ${this.color}`;
+    }
+}
+
+// -------------------------------------------------------------
+
+/**
+ * CLASE HIJA: COCHE
+ * Hereda todas las propiedades y métodos de Vehiculo.
+ * Demuestra: Herencia y Polimorfismo.
+ */
+class Coche extends Vehiculo {
+    // El constructor llama al constructor del padre (super) y añade un atributo propio.
+    constructor(marca, modelo, color, num_puertas) {
+        super(marca, modelo, color); // Herencia: llama al constructor de Vehiculo
+        this.num_puertas = num_puertas; // Atributo propio
+    }
+
+    // Método propio: Acción específica de un Coche.
+    acelerar() {
+        return `El ${this.marca} está acelerando a fondo. ¡Cuidado!`;
+    }
+
+    // Polimorfismo: Sobreescribe el método del padre para añadir información.
+    mostrarInfo() {
+        const infoBase = super.mostrarInfo(); // Llama al método del padre
+        return `${infoBase} | Tipo: Coche | Puertas: ${this.num_puertas}`;
+    }
+}
+
+// -------------------------------------------------------------
+
+/**
+ * USO Y PRUEBA (Instanciación de Objetos)
+ * Demuestra: Objetos (Instancias).
+ */
+
+// 1. Instanciar un objeto de la Clase Padre (Vehiculo)
+const miMoto = new Vehiculo("Yamaha", "YZF-R3", "Azul");
+
+// 2. Instanciar un objeto de la Clase Hija (Coche)
+const miCoche = new Coche("Tesla", "Model 3", "Negro", 4);
+
+// -------------------------------------------------------------
+
+// Ejecución de Métodos y visualización de resultados
+
+console.log("--- Objeto: miMoto (Clase Vehiculo) ---");
+console.log(miMoto.mostrarInfo());
+console.log(miMoto.encender());
+
+console.log("\n--- Objeto: miCoche (Clase Coche) ---");
+console.log(miCoche.mostrarInfo()); // Método Polimórfico (sobrescrito)
+console.log(miCoche.encender());   // Método Heredado de Vehiculo
+console.log(miCoche.acelerar());   // Método propio de Coche
+
+
 
 
 
